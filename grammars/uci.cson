@@ -1,0 +1,29 @@
+'scopeName': 'source.uci'
+'name': 'OpenWrt UCI'
+'filetype': [ 'uci' ]
+'patterns': [
+        {
+                'match': '^\\s*\\b(package|config|option|list)\\b'
+                'name': 'keyword.uci'
+        }
+        {
+                'match': '^\\s*#'
+                'name': 'comment.uci'
+        }
+        {
+                'match': '\'[^\']*\''
+                'name': 'string.uci'
+        }
+        {
+                'match': '\"[^\"]*\"'
+                'name': 'string.uci'
+        }
+        {
+                'match': '\\s\'(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\'\\s'
+                'name': 'constant.other.uci'
+        }
+        {
+                'match': '\\s\"(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\"\\s'
+                'name': 'constant.other.uci'
+        }
+]

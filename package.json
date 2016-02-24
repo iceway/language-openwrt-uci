@@ -1,0 +1,17 @@
+{
+  "name": "language-uci",
+  "version": "0.1.0",
+  "description": "Add syntax highlighting to OpenWrt uci config data files and uci command",
+  "keywords": [ "uci"
+  ],
+  "repository": {
+          "type": "git",
+          "url": "https://github.com/iceway/language-uci"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
