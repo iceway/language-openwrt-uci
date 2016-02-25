@@ -1,6 +1,6 @@
 'scopeName': 'source.uci'
 'name': 'OpenWrt UCI'
-'filetype': [ 'uci' ]
+'fileTypes': [ 'uci' ]
 'patterns': [
         {
                 'match': '^\\s*\\bpackage\\b'

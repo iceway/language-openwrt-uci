@@ -1,6 +1,6 @@
 'scopeName': 'source.ucicmd'
 'name': 'OpenWrt uci command'
-'filetype': [ 'ucicmd' ]
+'fileTypes': [ 'ucicmd' ]
 'patterns': [
         {
                 'match': '\\buci\\b'
