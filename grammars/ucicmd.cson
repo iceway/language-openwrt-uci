@@ -4,23 +4,23 @@
 'patterns': [
         {
                 'match': '\\buci\\b'
-                'name': 'entity.name.function.ucicmd'
+                'name': 'entity.other.inherited-class.ucicmd'
         }
         {
-                'match': '\\b(batch|export|import|changes|commit|add|add_list|del_list|show|get|set|delete|rename|revert|reorder)\\b'
+                'match': '^\\s*\\b(batch|export|import|changes|commit|add|add_list|del_list|show|get|set|delete|rename|revert|reorder)\\b'
                 'name': 'entity.other.attribute-name.ucicmd'
         }
         {
                 'match': '<config>'
-                'name': 'storage.ucicmd'
+                'name': 'string.ucicmd'
         }
         {
                 'match': '<section>'
-                'name': 'storage.type.ucicmd'
+                'name': 'entity.name.tag.ucicmd'
         }
         {
                 'match': '<option>'
-                'name': 'string.ucicmd'
+                'name': 'entity.name.instance.ucicmd'
         }
         {
                 'match': '-\\w\\b'

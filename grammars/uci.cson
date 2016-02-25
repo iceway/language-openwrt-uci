@@ -3,27 +3,31 @@
 'filetype': [ 'uci' ]
 'patterns': [
         {
-                'match': '^\\s*\\b(package|config|option|list)\\b'
-                'name': 'keyword.uci'
+                'match': '^\\s*\\bpackage\\b'
+                'name': 'string.package.uci'
+        }
+        {
+                'match': '^\\s*\\bconfig\\b'
+                'name': 'entity.name.class.config.uci'
+        }
+        {
+                'match': '^\\s*\\boption\\b'
+                'name': 'entity.name.instance.option.uci'
+        }
+        {
+                'match': '^\\s*\\blist\\b'
+                'name': 'entity.name.tag.list.uci'
         }
         {
                 'match': '^\\s*#'
                 'name': 'comment.uci'
         }
         {
-                'match': '\'[^\']*\''
-                'name': 'string.uci'
-        }
-        {
-                'match': '\"[^\"]*\"'
-                'name': 'string.uci'
-        }
-        {
                 'match': '\\s\'(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\'\\s'
-                'name': 'constant.other.uci'
+                'name': 'constant.other.boolean.uci'
         }
         {
                 'match': '\\s\"(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\"\\s'
-                'name': 'constant.other.uci'
+                'name': 'constant.other.boolean.uci'
         }
 ]
