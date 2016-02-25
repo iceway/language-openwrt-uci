@@ -19,15 +19,11 @@
                 'name': 'entity.name.tag.list.uci'
         }
         {
-                'match': '^\\s*#'
+                'match': '^\\s*#.*$'
                 'name': 'comment.uci'
         }
         {
-                'match': '\\s\'(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\'\\s'
-                'name': 'constant.other.boolean.uci'
-        }
-        {
-                'match': '\\s\"(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\"\\s'
+                'match': '(\'|\")(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\\1'
                 'name': 'constant.other.boolean.uci'
         }
 ]
