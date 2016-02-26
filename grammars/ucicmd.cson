@@ -26,4 +26,25 @@
                 'match': '-\\w\\b'
                 'name': 'string.parameter.ucicmd'
         }
+        {
+                'match': '([+-])?([^.=]*)\.([^.=]*)(\.([^.=]*))?=(\'.*\')'
+                'name': 'string.ucicmd'
+                'captures':
+                        '1':
+                                'name': 'constant.other.character.ucicmd'
+                        '2':
+                                'name': 'entity.name.class.ucicmd'
+                        '3':
+                                'name': 'entity.name.instance.ucicmd'
+                        '5':
+                                'name': 'entity.name.tag.ucicmd'
+                        '6':
+                                'name': 'string.parameter.ucicmd'
+                'comment': 'for command uci changes and temporary files contents'
+        }
+        {
+                'match': '^\\s*#.*$'
+                'name': 'comment.line.ucicfg'
+                'comment': 'comments, lines start with #'
+        }
 ]
