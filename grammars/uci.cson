@@ -3,27 +3,50 @@
 'fileTypes': [ 'ucicfg' ]
 'patterns': [
         {
-                'match': '^\\s*\\bpackage\\b'
-                'name': 'string.package.uci'
+                'match': '^\\s*(package)\\s'
+                'captures':
+                        '1':
+                                'name': 'entity.other.inherited-class.ucicfg.package'
+                'comment': 'sequences like: package <pkgName>'
         }
         {
-                'match': '^\\s*\\bconfig\\b'
-                'name': 'entity.name.class.config.uci'
+                'match': '^\\s*(config)\\s'
+                'captures':
+                        '1':
+                                'name': 'entity.name.class.ucicfg.config'
+                'comment': 'sequences like: config <sectionType> [<sectionName>]'
         }
         {
-                'match': '^\\s*\\boption\\b'
-                'name': 'entity.name.instance.option.uci'
+                'match': '^\\s*(option)\\s'
+                'captures':
+                        '1':
+                                'name': 'entity.name.instance.ucicfg.option'
+                'comment': 'sequences like:     option <optName> <optValue>'
         }
         {
-                'match': '^\\s*\\blist\\b'
-                'name': 'entity.name.tag.list.uci'
+                'match': '^\\s*(list)\\s'
+                'captures':
+                        '1':
+                                'name': 'entity.name.tag.ucicfg.list'
+                'comment': 'sequecens like:     list <listName> <listValue>'
         }
         {
                 'match': '^\\s*#.*$'
-                'name': 'comment.uci'
+                'name': 'comment.line.ucicfg'
+                'comment': 'comments, lines start with #'
         }
         {
-                'match': '(\'|\")(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\\1'
-                'name': 'constant.other.boolean.uci'
+                'match': '(\\s|\'|\")(?i:(1|yes|on|true|enabled|0|no|off|flase|disabled))\\1'
+                'name': 'constant.other.boolean.ucicfg'
+                'comment': 'boolean variables in uci data files'
+        }
+        {
+                'match': '(\'|\")(.*)(\\1)'
+                'name': 'string.quoted.ucicfg'
+                'captures':
+                        '1': 'string.quoted.start.ucicfg'
+                        '2': 'string.quoted.content.ucicfg'
+                        '3': 'string.quoted.end.ucicfg'
+                'comment': 'sequecens like: \"XXX\" or \'XXX\''
         }
 ]

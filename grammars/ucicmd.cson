@@ -1,29 +1,29 @@
 'scopeName': 'source.ucicmd'
-'name': 'OpenWrt uci command'
+'name': 'OpenWrt uci command Usage'
 'fileTypes': [ 'ucicmd' ]
 'patterns': [
         {
                 'match': '\\buci\\b'
-                'name': 'entity.other.inherited-class.ucicmd'
+                'name': 'keyword.ucicmd'
         }
         {
                 'match': '^\\s*\\b(batch|export|import|changes|commit|add|add_list|del_list|show|get|set|delete|rename|revert|reorder)\\b'
-                'name': 'entity.other.attribute-name.ucicmd'
+                'name': 'constant.other.subcmd.ucicmd'
         }
         {
                 'match': '<config>'
-                'name': 'string.ucicmd'
+                'name': 'entity.name.class.ucicmd'
         }
         {
                 'match': '<section>'
-                'name': 'entity.name.tag.ucicmd'
-        }
-        {
-                'match': '<option>'
                 'name': 'entity.name.instance.ucicmd'
         }
         {
+                'match': '<option>'
+                'name': 'entity.name.tag.ucicmd'
+        }
+        {
                 'match': '-\\w\\b'
-                'name': 'variable.parameter.ucicmd'
+                'name': 'string.parameter.ucicmd'
         }
 ]
