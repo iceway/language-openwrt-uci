@@ -20,7 +20,7 @@
                 'match': '^\\s*(option)\\s'
                 'captures':
                         '1':
-                                'name': 'entity.name.instance.ucicfg.option'
+                                'name': 'entity.name.tag.ucicfg.option'
                 'comment': 'sequences like:     option <optName> <optValue>'
         }
         {
